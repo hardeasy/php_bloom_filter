@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("bloom_filter", "for bloom_filter support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("bloom_filter", "enable bloom_filter support", "no");
+
+if (PHP_BLOOM_FILTER != "no") {
+	EXTENSION("bloom_filter", "bloom_filter.c");
+}
+
