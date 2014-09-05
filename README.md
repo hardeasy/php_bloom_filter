@@ -5,7 +5,7 @@
 -----
 ~~~
 phpize
-./configure [--enable-redis-igbinary]
+./configure [php-config路径]
 make && make install
 ~~~
 
@@ -59,3 +59,36 @@ _**Description**_: 向布隆过滤器添加
 bloom_filter_check($bloom,'http://localhost');
 ~~~
 
+
+### bloom_filter_check
+-----
+_**Description**_: 检查过滤器中是否存在
+
+##### *Parameters*
+*resource*: 过滤器实例
+*STRING*: 字符串
+
+##### *Return value*
+*BOOL*: true or false
+
+##### *Example*
+~~~
+bloom_filter_check($bloom,'http://localhost');
+~~~
+
+
+
+### bloom_filter_destory
+-----
+_**Description**_: 销毁一个过滤器
+
+##### *Parameters*
+*resource*: 过滤器实例
+
+##### *Return value*
+*BOOL*: true or false
+
+##### *Example*
+~~~
+bloom_filter_destory($bloom);
+~~~
